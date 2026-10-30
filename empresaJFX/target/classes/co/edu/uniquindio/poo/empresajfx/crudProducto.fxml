@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="429.0"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="co.edu.uniquindio.poo.empresajfx.viewController.ProductoViewController">
+    <children>
+        <Label layoutX="130.0" layoutY="20.0" text="Gestión Productos">
+            <font>
+                <javafx.scene.text.Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="41.0" layoutY="70.0" text="Código:" />
+        <Label layoutX="41.0" layoutY="105.0" text="Nombre:" />
+        <Label layoutX="41.0" layoutY="140.0" text="Precio:" />
+        <TextField fx:id="txtCodigo" layoutX="126.0" layoutY="66.0" prefWidth="194.0" />
+        <TextField fx:id="txtNombre" layoutX="126.0" layoutY="101.0" prefWidth="194.0" />
+        <TextField fx:id="txtPrecio" layoutX="126.0" layoutY="136.0" prefWidth="194.0" />
+        <Button layoutX="64.0" layoutY="185.0" onAction="#onAgregarProducto" text="Agregar producto" />
+        <Button layoutX="210.0" layoutY="185.0" onAction="#onActualizarProducto" text="Actualizar producto" />
+        <TableView fx:id="tblListProducto" layoutX="7.0" layoutY="230.0" prefHeight="210.0" prefWidth="412.0">
+            <columns>
+                <TableColumn fx:id="tbcCodigo" prefWidth="100.0" text="Código" />
+                <TableColumn fx:id="tbcNombre" prefWidth="200.0" text="Nombre" />
+                <TableColumn fx:id="tbcPrecio" prefWidth="100.0" text="Precio" />
+            </columns>
+        </TableView>
+        <Button layoutX="93.0" layoutY="455.0" onAction="#onLimpiar" prefWidth="106.0" text="Limpiar" />
+        <Button layoutX="234.0" layoutY="455.0" onAction="#onEliminar" prefWidth="97.0" text="Eliminar" />
+    </children>
+</AnchorPane>
